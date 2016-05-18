@@ -1,3 +1,105 @@
 @mixin core_button {
+	.button {
+		display: inline-block;
+		margin: 0;
+		vertical-align: middle;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		cursor: pointer;
+		color: inherit;
 
+		@if $button-font-family != false {
+			font-family: $button-font-family;
+		}
+		@if $button-font-family != false {
+			font-weight: $button-font-weight;
+		}
+		@if $button-font-family != false {
+			font-style: $button-font-style;
+		}
+
+		@if $button-border != false {
+			border: $button-border;
+		}
+
+		@if $button-border-radius != false {
+			border-radius: $button-border-radius;
+		}
+
+		@include appearance(none);
+		@include user-select(none);
+		@if $button-transitions == true {
+			@include transition(
+				(background-color $transition-fast ease-out 0s),
+				(color $transition-fast ease-out 0s),
+				(border-color $transition-fast ease-out 0s)
+			);
+		}
+
+		&.button--disabled,
+		&[disabled] {
+			cursor: not-allowed;
+		}
+
+		&.button--wide {
+			display: block;
+			width: 100%;
+		}
+
+		&,
+		&:focus,
+		&:active,
+		&:hover {
+			text-decoration: none;
+		}
+
+		@if $button-glyph == true {
+			&.button--glyph {
+				position: relative;
+			}
+		}
+	}
+
+	@if $button-glyph == true {
+		.button-glyph-placeholder {
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			text-align: center;
+			line-height: inherit;
+
+			@if $button-glyph-default-position == 'left' {
+				left: 0;
+
+				.button--glyph-reverse & {
+					right: 0;
+					left: auto;
+				}
+			} @else {
+				right: 0;
+
+				.button--glyph-reverse & {
+					right: auto;
+					left: 0;
+				}
+			}
+		}
+
+		.button-glyph {
+			vertical-align: middle;
+			line-height: normal;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			top: auto;
+
+			&:before,
+			&:after {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
 }

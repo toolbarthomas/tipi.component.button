@@ -1,0 +1,20 @@
+$button-height: 		44px;
+$button-height--medium: 42px;
+$button-height--large: 	50px;
+
+$button-gutter: 24px;
+
+$button-border-style: solid;
+$button-border-width: 2px;
+$button-border-color: null;
+$button-border: $button-border-style $button-border-width $button-border-color; // none or style, widh and/or color;
+$button-border-radius: 0;
+
+$button-font-family: false;
+$button-font-weight: 700;
+$button-font-style: normal;
+
+$button-transitions: true;
+$button-glyph: true;
+$button-glyph-default-position: "right";
+$button-square: true;

@@ -1,6 +1,6 @@
 {
   "name": "tipi.component.button",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "homepage": "https://github.com/toolbarthomas/tipi.component.button",
   "authors": [
     "Thomas van der Velde <contact@toolbarthomas.net>"
@@ -13,10 +13,5 @@
     "button"
   ],
   "license": "MIT",
-  "main": "_tipi.component.button.scss",
-  "ignore": [
-    "node_modules",
-    "bower_components",
-    "sass-cache"
-  ]
+  "main": "_tipi.component.button.scss"
 }
