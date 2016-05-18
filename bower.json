@@ -10,7 +10,7 @@
     "toolbarthomas",
     "modular",
     "tipi",
-    "button",
+    "button"
   ],
   "license": "MIT",
   "main": "_tipi.component.button.scss",
@@ -18,8 +18,5 @@
     "node_modules",
     "bower_components",
     "sass-cache",
-  ],
-  "dependencies" : {
-      "tipi" : "~0.1.0"
-  }
+  ]
 }
