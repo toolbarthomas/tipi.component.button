@@ -13,10 +13,5 @@
     "button"
   ],
   "license": "MIT",
-  "main": "_tipi.component.button.scss",
-  "ignore": [
-    "node_modules",
-    "bower_components",
-    "sass-cache"
-  ]
+  "main": "_tipi.component.button.scss"
 }
