@@ -1,0 +1,26 @@
+{
+  "name": "tipi",
+  "version": "0.1.0",
+  "homepage": "https://github.com/toolbarthomas/tipi",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Button component for tipi",
+  "keywords": [
+    "toolbarthomas",
+    "modular",
+    "tipi",
+    "button"
+  ],
+  "license": "MIT",
+  "main": "_tipi.component.button.scss",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "sass-cache",
+    "build/",
+  ],
+  "dependencies" : {
+      "tipi" : "~0.1.0"
+  }
+}
