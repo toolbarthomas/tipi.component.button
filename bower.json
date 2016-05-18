@@ -10,7 +10,7 @@
     "toolbarthomas",
     "modular",
     "tipi",
-    "button"
+    "button",
   ],
   "license": "MIT",
   "main": "_tipi.component.button.scss",
