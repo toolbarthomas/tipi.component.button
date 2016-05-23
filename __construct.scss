@@ -1,0 +1,130 @@
+@mixin construct_button-sizes($selector, $height, $gutter:$button-gutter) {
+	@if $height > 0 {
+		#{$selector} {
+			height: $height;
+
+			@if $gutter > 0 {
+				padding: 0 $button-gutter;
+			}
+
+			@if $button-border == none {
+				line-height: $height;
+			} @else {
+				line-height: $height - ($button-border-width * 2);
+			}
+
+			@if $button-glyph == true {
+				&.button--glyph {
+					text-align: left;
+					position: relative;
+					@if $button-glyph-default-position == 'left' {
+						padding-right: $button-gutter;
+						padding-left: $height;
+					} @else {
+						padding-right: $height;
+						padding-left: $button-gutter;
+					}
+
+					&.button--glyph-reverse {
+						@if $button-glyph-default-position == 'left' {
+							padding-right: $height;
+							padding-left: $button-gutter;
+						} @else {
+							padding-right: $button-gutter;
+							padding-left: $height;
+						}
+					}
+				}
+
+				.button-glyph-placeholder {
+					width: $height;
+				}
+			}
+
+			@if $button-square == true {
+				&.button--square {
+					width: $height;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+@mixin construct_button-styles($selector, $background-color, $background-color--hover, $background-color--active, $border-color, $border-color--hover, $border-color--active, $color, $color--hover, $color--active) {
+	#{$selector} {
+		@if $background-color != false {
+			background-color: $background-color;
+		}
+
+		@if $border-color != false {
+			border-color: $border-color;
+		} @else {
+			border-color: transparent;
+		}
+
+		@if $color != false {
+			color: $color;
+
+			@if $button-glyph == true {
+				.button-glyph {
+					fill: $color;
+				}
+			}
+		}
+
+		.no-touchevents &:hover {
+			@if $background-color--hover != false {
+				background-color: $background-color--hover;
+			}
+			@if $border-color--hover != false {
+				border-color: $border-color--hover;
+			}
+			@if $color--hover != false {
+				color: $color--hover;
+
+				@if $button-glyph == true {
+					.button-glyph {
+						fill: $color--hover;
+					}
+				}
+			} @else {
+				color: $color;
+
+				@if $button-glyph == true {
+					.button-glyph {
+						fill: $color;
+					}
+				}
+			}
+
+		}
+
+		.no-touchevents &:active,
+		.no-touchevents &.button--active {
+			@if $background-color--active != false {
+				background-color: $background-color--active;
+			}
+			@if $border-color--active != false {
+				border-color: $border-color--active;
+			}
+			@if $color--active != false {
+				color: $color--active;
+
+				@if $button-glyph == true {
+					.button-glyph {
+						fill: $color--active;
+					}
+				}
+			} @else {
+				color: $color;
+
+				@if $button-glyph == true {
+					.button-glyph {
+						fill: $color;
+					}
+				}
+			}
+		}
+	}
+}

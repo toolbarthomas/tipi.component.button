@@ -19,17 +19,16 @@
 		@if $button-font-family != false {
 			font-style: $button-font-style;
 		}
-
 		@if $button-border != false {
 			border: $button-border;
 		}
-
 		@if $button-border-radius != false {
 			border-radius: $button-border-radius;
 		}
 
 		@include appearance(none);
 		@include user-select(none);
+
 		@if $button-transitions == true {
 			@include transition(
 				(background-color $transition-fast ease-out 0s),
