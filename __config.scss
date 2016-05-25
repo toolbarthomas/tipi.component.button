@@ -1,20 +1,20 @@
-$button-height: 		44px;
-$button-height--medium: 42px;
-$button-height--large: 	50px;
+$button-height: 		36px !default;
+$button-height--medium: 44px !default;
+$button-height--large: 	52px !default;
 
-$button-gutter: 24px;
+$button-gutter: 24px !default;
 
-$button-border-style: solid;
-$button-border-width: 2px;
-$button-border-color: null;
-$button-border: $button-border-style $button-border-width $button-border-color; // none or style, widh and/or color;
-$button-border-radius: 0;
+$button-border-style: solid !default;
+$button-border-width: 2px !default;
+$button-border-color: null !default;
+$button-border: $button-border-style $button-border-width $button-border-color !default; // none or style, widh and/or color;
+$button-border-radius: 0 !default;
 
-$button-font-family: false;
-$button-font-weight: 700;
-$button-font-style: normal;
+$button-font-family: false !default;
+$button-font-weight: 700 !default;
+$button-font-style: normal !default;
 
-$button-transitions: true;
-$button-glyph: true;
-$button-glyph-default-position: "right";
-$button-square: true;
+$button-transitions: true !default;
+$button-glyph: true !default;
+$button-glyph-default-position: "right" !default;
+$button-square: true !default;
