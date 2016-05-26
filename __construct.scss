@@ -1,8 +1,8 @@
-@mixin construct_button-sizes($selector, $height, $gutter:$button-gutter) {
-	@if $height > 0 {
-		#{$selector} {
-			height: $height;
+@mixin construct_button-sizes($selector:'.button', $height:$button-height, $gutter:$button-gutter, $disableBorder:false) {
+	#{$selector} {
+		height: $height;
 
+		@if $disableBorder == false {
 			@if $gutter > 0 {
 				padding: 0 $button-gutter;
 			}
@@ -47,6 +47,8 @@
 					padding: 0;
 				}
 			}
+		} @else {
+			height: $height;
 		}
 	}
 }
@@ -60,7 +62,7 @@
 		@if $border-color != false {
 			border-color: $border-color;
 		} @else {
-			border-color: transparent;
+			border: 0;
 		}
 
 		@if $color != false {
@@ -68,7 +70,7 @@
 
 			@if $button-glyph == true {
 				@if $glyph-color == false {
-					$glyph-color = $color;
+					$glyph-color: $color;
 				}
 
 				.button-glyph {
@@ -90,7 +92,7 @@
 
 				@if $button-glyph == true {
 					@if $glyph-color--hover == false {
-						$glyph-color--hover = $color--hover;
+						$glyph-color--hover: $color--hover;
 					}
 
 					.button-glyph {
@@ -103,7 +105,7 @@
 
 				@if $button-glyph == true {
 					@if $glyph-color == false {
-						$glyph-color = $color;
+						$glyph-color: $color;
 					}
 
 					.button-glyph {
@@ -128,7 +130,7 @@
 
 				@if $button-glyph == true {
 					@if $glyph-color--active == false {
-						$glyph-color--active = $color--active;
+						$glyph-color--active: $color--active;
 					}
 
 					.button-glyph {
@@ -141,7 +143,7 @@
 
 				@if $button-glyph == true {
 					@if $glyph-color == false {
-						$glyph-color = $color;
+						$glyph-color: $color;
 					}
 
 					.button-glyph {
