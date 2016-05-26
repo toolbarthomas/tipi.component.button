@@ -1,16 +1,16 @@
-@mixin construct_button-sizes($selector:'.button', $height:$button-height, $gutter:$button-gutter, $disableBorder:false) {
+@mixin construct_button-sizes($selector:'.button', $height:$button-height, $gutter:$button-gutter, $border-width: $button-border-width, $disableBorder:false) {
 	#{$selector} {
 		height: $height;
 
 		@if $disableBorder == false {
 			@if $gutter > 0 {
-				padding: 0 $button-gutter;
+				padding: 0 $gutter;
 			}
 
 			@if $button-border == none {
 				line-height: $height;
 			} @else {
-				line-height: $height - ($button-border-width * 2);
+				line-height: $height - ($border-width * 2);
 			}
 
 			@if $button-glyph == true {
@@ -18,19 +18,19 @@
 					text-align: left;
 					position: relative;
 					@if $button-glyph-default-position == 'left' {
-						padding-right: $button-gutter;
+						padding-right: $gutter;
 						padding-left: $height;
 					} @else {
 						padding-right: $height;
-						padding-left: $button-gutter;
+						padding-left: $gutter;
 					}
 
 					&.button--glyph-reverse {
 						@if $button-glyph-default-position == 'left' {
 							padding-right: $height;
-							padding-left: $button-gutter;
+							padding-left: $gutter;
 						} @else {
-							padding-right: $button-gutter;
+							padding-right: $gutter;
 							padding-left: $height;
 						}
 					}
@@ -49,6 +49,7 @@
 			}
 		} @else {
 			height: $height;
+			line-height: $height;
 		}
 	}
 }
