@@ -51,7 +51,7 @@
 	}
 }
 
-@mixin construct_button-styles($selector, $background-color, $background-color--hover, $background-color--active, $border-color, $border-color--hover, $border-color--active, $color, $color--hover, $color--active) {
+@mixin construct_button-styles($selector, $background-color, $background-color--hover, $background-color--active, $border-color, $border-color--hover, $border-color--active, $color, $color--hover, $color--active, $glyph-color:false, $glyph-color--hover:false, $glyph-color--active:false) {
 	#{$selector} {
 		@if $background-color != false {
 			background-color: $background-color;
@@ -67,8 +67,13 @@
 			color: $color;
 
 			@if $button-glyph == true {
+				@if $glyph-color == false {
+					$glyph-color = $color;
+				}
+
 				.button-glyph {
-					fill: $color;
+					fill: $glyph-color;
+					color: $glyph-color;
 				}
 			}
 		}
@@ -84,16 +89,26 @@
 				color: $color--hover;
 
 				@if $button-glyph == true {
+					@if $glyph-color--hover == false {
+						$glyph-color--hover = $color--hover;
+					}
+
 					.button-glyph {
-						fill: $color--hover;
+						fill: $glyph-color--hover;
+						color: $glyph-color--hover;
 					}
 				}
 			} @else {
 				color: $color;
 
 				@if $button-glyph == true {
+					@if $glyph-color == false {
+						$glyph-color = $color;
+					}
+
 					.button-glyph {
-						fill: $color;
+						fill: $glyph-color;
+						color: $glyph-color;
 					}
 				}
 			}
@@ -112,16 +127,26 @@
 				color: $color--active;
 
 				@if $button-glyph == true {
+					@if $glyph-color--active == false {
+						$glyph-color--active = $color--active;
+					}
+
 					.button-glyph {
-						fill: $color--active;
+						fill: $glyph-color--active;
+						color: $glyph-color--active;
 					}
 				}
 			} @else {
 				color: $color;
 
 				@if $button-glyph == true {
+					@if $glyph-color == false {
+						$glyph-color = $color;
+					}
+
 					.button-glyph {
-						fill: $color;
+						fill: $glyph-color;
+						color: $glyph-color;
 					}
 				}
 			}

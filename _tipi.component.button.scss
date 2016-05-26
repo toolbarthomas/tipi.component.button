@@ -4,21 +4,23 @@
 
 @include core_button;
 
-@include construct_button-sizes(
-	$selector: '.button',
-	$height: $button-height,
-	$gutter: $button-gutter
-);
+@if $button-sample == true {
+	@include construct_button-sizes(
+		$selector: '.button',
+		$height: $button-height,
+		$gutter: $button-gutter
+	);
 
-@include construct_button-styles(
-	$selector: '.button',
-	$background-color: $primary-color,
-	$background-color--hover: $primary-color--hover,
-	$background-color--active: false,
-	$border-color: false,
-	$border-color--hover: false,
-	$border-color--active: false,
-	$color: $body-color,
-	$color--hover: false,
-	$color--active: false
-);
+	@include construct_button-styles(
+		$selector: '.button',
+		$background-color: $primary-color,
+		$background-color--hover: $primary-color--hover,
+		$background-color--active: false,
+		$border-color: false,
+		$border-color--hover: false,
+		$border-color--active: false,
+		$color: $body-color,
+		$color--hover: false,
+		$color--active: false
+	);
+}
