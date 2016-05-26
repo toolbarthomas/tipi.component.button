@@ -8,7 +8,8 @@
 	@include construct_button-sizes(
 		$selector: '.button',
 		$height: $button-height,
-		$gutter: $button-gutter
+		$gutter: $button-gutter,
+		$glyph-width: $button-glyph-width
 	);
 
 	@include construct_button-styles(
