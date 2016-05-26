@@ -1,4 +1,4 @@
-@mixin construct_button-sizes($selector:'.button', $height:$button-height, $gutter:$button-gutter, $border-width: $button-border-width, $disableBorder:false) {
+@mixin construct_button-sizes($selector:'.button', $height:$button-height, $gutter:$button-gutter, $border-width: $button-border-width, $disableBorder:false, $glyph-width:false) {
 	#{$selector} {
 		height: $height;
 
@@ -15,14 +15,29 @@
 
 			@if $button-glyph == true {
 				&.button--glyph {
-					text-align: left;
 					position: relative;
-					@if $button-glyph-default-position == 'left' {
-						padding-right: $gutter;
-						padding-left: $height;
+
+
+					@if $glyph-width != false {
+						$glyph-width: $height;
+					}
+
+					@if $button-glyph-text-align != 'left' {
+						text-align: center;
+
+						$glyph-gutter: $glyph-width;
 					} @else {
-						padding-right: $height;
-						padding-left: $gutter;
+						text-align: left;
+
+						$glyph-gutter: $gutter;
+					}
+
+					@if $button-glyph-default-position == 'left' {
+						padding-right: $glyph-gutter;
+						padding-left: $glyph-width;
+					} @else {
+						padding-right: $glyph-width;
+						padding-left: $glyph-gutter;
 					}
 
 					&.button--glyph-reverse {
