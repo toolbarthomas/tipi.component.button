@@ -17,19 +17,16 @@
 				&.button--glyph {
 					position: relative;
 
-
+					$glyph-gutter: $gutter;
 					@if $glyph-width == false {
 						$glyph-width: $height;
 					}
 
 					@if $button-glyph-text-align != 'left' {
 						text-align: center;
-
 						$glyph-gutter: $glyph-width;
 					} @else {
 						text-align: left;
-
-						$glyph-gutter: $gutter;
 					}
 
 					@if $button-glyph-default-position == 'left' {
