@@ -1,62 +1,62 @@
 @mixin core_button {
-	.button {
-		display: inline-block;
-		padding: 0;
-		margin: 0;
-		vertical-align: middle;
-		text-align: center;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		cursor: pointer;
-		color: inherit;
+	#{$buttons} {
+		&.button {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			vertical-align: middle;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			cursor: pointer;
+			color: inherit;
+			border: none;
 
-		@if $button-font-family != false {
-			font-family: $button-font-family;
-		}
-		@if $button-font-family != false {
-			font-weight: $button-font-weight;
-		}
-		@if $button-font-family != false {
-			font-style: $button-font-style;
-		}
-		@if $button-border != false {
-			border: $button-border;
-		}
-		@if $button-border-radius != false {
-			border-radius: $button-border-radius;
-		}
+			@if $button-font-family != false {
+				font-family: $button-font-family;
+			}
+			@if $button-font-family != false {
+				font-weight: $button-font-weight;
+			}
+			@if $button-font-family != false {
+				font-style: $button-font-style;
+			}
 
-		@include appearance(none);
-		@include user-select(none);
+			@include appearance(none);
+			@include user-select(none);
 
-		@if $button-transitions == true {
-			@include transition(
-				(background-color $transition-fast ease-out 0s),
-				(color $transition-fast ease-out 0s),
-				(border-color $transition-fast ease-out 0s)
-			);
-		}
+			@if $button-transitions == true {
+				@include transition(
+					(background-color $transition-fast ease-out 0s),
+					(color $transition-fast ease-out 0s),
+					(border-color $transition-fast ease-out 0s)
+				);
+			}
 
-		&.button--disabled,
-		&[disabled] {
-			cursor: not-allowed;
-		}
+			&.button--disabled,
+			&[disabled] {
+				cursor: not-allowed;
+			}
 
-		&.button--wide {
-			display: block;
-			width: 100%;
-		}
+			&.button--wide {
+				display: block;
+				width: 100%;
+			}
 
-		&,
-		&:focus,
-		&:active,
-		&:hover {
-			text-decoration: none;
-		}
+			&,
+			&:focus,
+			&:active,
+			&:hover,
+			.no-touchevents &:hover {
+				text-decoration: none;
+			}
 
-		@if $button-glyph == true {
-			&.button--glyph {
-				position: relative;
+
+
+			@if $button-glyph == true {
+				&.button--glyph {
+					position: relative;
+				}
 			}
 		}
 	}

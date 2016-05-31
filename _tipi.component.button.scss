@@ -9,6 +9,7 @@
 		$selector: '.button',
 		$height: $button-height,
 		$gutter: $button-gutter,
+		$border-width: 2px,
 		$glyph-width: $button-glyph-width
 	);
 
@@ -17,7 +18,7 @@
 		$background-color: $primary-color,
 		$background-color--hover: $primary-color--hover,
 		$background-color--active: false,
-		$border-color: false,
+		$border: false,
 		$border-color--hover: false,
 		$border-color--active: false,
 		$color: $body-color,
