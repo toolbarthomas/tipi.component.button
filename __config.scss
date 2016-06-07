@@ -4,10 +4,6 @@ $buttons: (
 	'button'
 );
 
-$button-height: 					36px !default;
-$button-line-height:				36px !default;
-$button-gutter:						24px !default;
-
 $button-font-family:				inherit !default;
 $button-font-weight:				700 !default;
 $button-font-style:					normal !default;
@@ -18,5 +14,3 @@ $button-glyph-width:				24px !default;
 $button-glyph-default-position:		'right' !default;
 $button-glyph-text-align:			'left' !default;
 $button-square: 					true !default;
-
-$button-sample: 					true !default;
