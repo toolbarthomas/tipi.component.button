@@ -1,3 +1,6 @@
+@import "mixins/button-height";
+@import "mixins/button-style";
+
 @mixin core_button {
 	#{$buttons} {
 		&.button {
@@ -8,39 +11,24 @@
 			text-align: center;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
+			background: none transparent;
 			cursor: pointer;
 			color: inherit;
 			border: none;
 
-			@if $button-font-family != false {
-				font-family: $button-font-family;
-			}
-			@if $button-font-family != false {
-				font-weight: $button-font-weight;
-			}
-			@if $button-font-family != false {
-				font-style: $button-font-style;
-			}
+			font-family: $button-font-family;
+			font-weight: $button-font-weight;
+			font-style: $button-font-style;
 
 			@include appearance(none);
 			@include user-select(none);
 
 			@if $button-transitions == true {
 				@include transition(
-					(background-color $transition-fast ease-out 0s),
+					(background $transition-fast ease-out 0s),
 					(color $transition-fast ease-out 0s),
 					(border-color $transition-fast ease-out 0s)
 				);
-			}
-
-			&.button--disabled,
-			&[disabled] {
-				cursor: not-allowed;
-			}
-
-			&.button--wide {
-				display: block;
-				width: 100%;
 			}
 
 			&,
@@ -51,13 +39,21 @@
 				text-decoration: none;
 			}
 
-
-
 			@if $button-glyph == true {
 				&.button--glyph {
 					position: relative;
 				}
 			}
+		}
+
+		&.button--disabled,
+		&[disabled] {
+			cursor: not-allowed;
+		}
+
+		&.button--wide {
+			display: block;
+			width: 100%;
 		}
 	}
 

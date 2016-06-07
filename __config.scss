@@ -5,9 +5,10 @@ $buttons: (
 );
 
 $button-height: 					36px !default;
+$button-line-height:				36px !default;
 $button-gutter:						24px !default;
 
-$button-font-family:				false !default;
+$button-font-family:				inherit !default;
 $button-font-weight:				700 !default;
 $button-font-style:					normal !default;
 

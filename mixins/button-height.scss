@@ -1,0 +1,40 @@
+@mixin button-height(
+	$selector: '.button',
+	$height: $button-height,
+	$line-height: $button-line-height,
+	$gutter: $button-gutter,
+	$glyph-width: $button-glyph-width
+) {
+	#{$buttons} {
+		&#{$selector} {
+			@if $height != false {
+				height: $height;
+			}
+			@if $line-height != false {
+				line-height: $line-height;
+			}
+			@if $gutter != false {
+				padding-right: $gutter;
+				padding-left: $gutter;
+			}
+
+			@if $button-glyph == true and $glyph-width != false {
+				&.button--glyph {
+					padding-left: $glyph-width;
+					padding-right: $glyph-width;
+				}
+
+				.button-glyph-placeholder {
+					width: $glyph-width;
+				}
+			}
+
+			@if $button-square == true {
+				&.button--square {
+					width: $height;
+					padding: 0;
+				}
+			}
+		}
+	}
+}

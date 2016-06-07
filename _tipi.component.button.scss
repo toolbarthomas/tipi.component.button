@@ -1,28 +1,4 @@
 @import "__config";
-@import "__construct";
 @import "__core";
 
 @include core_button;
-
-@if $button-sample == true {
-	@include construct_button-sizes(
-		$selector: '.button',
-		$height: $button-height,
-		$gutter: $button-gutter,
-		$border-width: false,
-		$glyph-width: $button-glyph-width
-	);
-
-	@include construct_button-styles(
-		$selector: '.button',
-		$background-color: $primary-color,
-		$background-color--hover: $primary-color--hover,
-		$background-color--active: false,
-		$border: false,
-		$border-color--hover: false,
-		$border-color--active: false,
-		$color: $body-color,
-		$color--hover: false,
-		$color--active: false
-	);
-}
