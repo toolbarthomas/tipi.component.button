@@ -64,6 +64,10 @@
 				}
 			}
 
+			@if $border-radius != false {
+				border-radius: $border-radius;
+			}
+
 			@if $button-glyph != false {
 				@if $glyph-color == false and $color != false {
 					$glyph-color: $color;
