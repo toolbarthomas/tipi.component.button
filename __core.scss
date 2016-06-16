@@ -1,6 +1,3 @@
-@import "mixins/button-height";
-@import "mixins/button-style";
-
 @mixin core_button {
 	#{$buttons} {
 		&.button {
@@ -103,6 +100,10 @@
 				margin: 0;
 				padding: 0;
 			}
+		}
+
+		svg.button-glyph {
+			vertical-align: middle;
 		}
 	}
 }
