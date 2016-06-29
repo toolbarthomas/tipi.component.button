@@ -19,9 +19,34 @@
 			}
 
 			@if $button-glyph == true and $glyph-width != false {
-				&.button--glyph {
-					padding-left: $glyph-width;
-					padding-right: $glyph-width;
+				@if $button-glyph-center == true {
+					&.button--glyph {
+						padding-left: $glyph-width;
+						padding-right: $glyph-width;
+					}
+				} @else {
+					&.button--glyph {
+						text-align: left;
+
+						@if $button-glyph-default-position == 'right' {
+							padding-right: $glyph-width;
+							padding-left: $gutter;
+
+							&.button--glyph-reverse {
+								padding-right: $gutter;
+								padding-left: $glyph-width;
+							}
+						}
+						@else {
+							padding-right: $gutter;
+							padding-left: $glyph-width;
+
+							&.button--glyph-reverse {
+								padding-right: $glyph-width;
+								padding-left: $gutter;
+							}
+						}
+					}
 				}
 
 				.button-glyph-placeholder {
