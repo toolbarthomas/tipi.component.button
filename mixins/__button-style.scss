@@ -27,7 +27,8 @@
 			}
 
 			@if $background-color--active != false {
-				.no-touchevents &:active {
+				.no-touchevents &:active,
+				&.button--active {
 					background-color: $background-color--active;
 				}
 			}
@@ -59,7 +60,8 @@
 			}
 
 			@if $border-color--active != false {
-				.no-touchevents &:active {
+				.no-touchevents &:active,
+				&.button--active {
 					border-color: $border-color--active;
 				}
 			}
@@ -77,19 +79,22 @@
 					.button-glyph {
 						color: $glyph-color;
 						fill: $glyph-color;
+					}
+				}
 
-						@if $glyph-color--hover != false {
-							.no-touchevents &:hover {
-								color: $glyph-color--hover;
-								fill: $glyph-color--hover;
-							}
-						}
+				@if $glyph-color--hover != false {
+					.no-touchevents &:hover .button-glyph {
+						color: $glyph-color--hover;
+						fill: $glyph-color--hover;
+					}
+				}
 
-						@if $glyph-color--active != false {
-							.no-touchevents &:active {
-								color: $glyph-color--active;
-								fill: $glyph-color--active;
-							}
+				@if $glyph-color--active != false {
+					.no-touchevents &:active,
+					&.button--active {
+						.button-glyph {
+							color: $glyph-color--active;
+							fill: $glyph-color--active;
 						}
 					}
 				}
