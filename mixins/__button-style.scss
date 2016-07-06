@@ -44,7 +44,8 @@
 			}
 
 			@if $color--active != false {
-				.no-touchevents &:active {
+				.no-touchevents &:active,
+				.button--active {
 					color: $color--active;
 				}
 			}
