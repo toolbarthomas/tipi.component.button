@@ -22,9 +22,9 @@
 
 			@if $button-transitions == true {
 				@include transition(
-					(background $transition-fast ease-out 0s),
-					(color $transition-fast ease-out 0s),
-					(border-color $transition-fast ease-out 0s)
+					(background $button-transition-speed $button-transition-timing $button-transition-delay),
+					(color $button-transition-speed $button-transition-timing $button-transition-delay),
+					(border-color $button-transition-speed $button-transition-timing $button-transition-delay)
 				);
 			}
 
@@ -90,8 +90,8 @@
 
 			@if $button-transitions == true {
 				@include transition(
-					(fill $transition-fast ease-out 0s),
-					(color $transition-fast ease-out 0s)
+					(fill $button-transition-speed $button-transition-timing $button-transition-delay),
+					(color $button-transition-speed $button-transition-timing $button-transition-delay)
 				);
 			}
 

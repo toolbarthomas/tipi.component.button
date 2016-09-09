@@ -1,7 +1,8 @@
 $buttons: (
 	'a',
 	'input',
-	'button'
+	'button',
+	'span'
 );
 
 $button-font-family:				inherit !default;
@@ -11,6 +12,10 @@ $button-font-style:					normal !default;
 $button-gutter:						24px !default;
 
 $button-transitions:				true !default;
+$button-transition-speed:			180ms !default;
+$button-transition-timing:			ease-in-out !default;
+$button-transition-delay:			0ms !default;
+
 $button-glyph:						true !default;
 $button-glyph-width:				24px !default;
 $button-glyph-default-position:		'right' !default;
