@@ -1,103 +1,107 @@
 @mixin button-style(
-	$selector: '.button',
-	$background-color: false,
-	$background-color--hover: false,
-	$background-color--active: false,
-	$color: false,
-	$color--hover: false,
-	$color--active: false,
+	$selector: $button,
+	$background: false,
+	$background--hover: false,
+	$background--active: false,
 	$border: false,
 	$border-color--hover: false,
 	$border-color--active: false,
 	$border-radius: false,
+	$border-radius--hover: false,
+	$border-radius--active: false,
+	$box-shadow: false,
+	$box-shadow--hover: false,
+	$box-shadow--active: false,
+	$color: false,
+	$color--hover: false,
+	$color--active: false,
 	$glyph-color: false,
 	$glyph-color--hover: false,
-	$glyph-color--active: false
+	$glyph-color--active: false,
+	$text-align: false
 ) {
 	#{$buttons} {
 		&#{$selector} {
-			@if $background-color != false {
-				background-color: $background-color;
-			}
-
-			@if $background-color--hover != false {
-				.no-touchevents &:hover {
-					background-color: $background-color--hover;
-				}
-			}
-
-			@if $background-color--active != false {
-				.no-touchevents &:active,
-				&.button--active {
-					background-color: $background-color--active;
-				}
-			}
-
-			@if $color != false {
-				color: $color;
-			}
-
-			@if $color--hover != false {
-				.no-touchevents &:hover {
-					color: $color--hover;
-				}
-			}
-
-			@if $color--active != false {
-				.no-touchevents &:active,
-				&.button--active {
-					color: $color--active;
-				}
+			@if $background != false {
+				background: $background;
 			}
 
 			@if $border != false {
 				border: $border;
 			}
 
-			@if $border-color--hover != false {
-				.no-touchevents &:hover {
-					border-color: $border-color--hover;
-				}
-			}
-
-			@if $border-color--active != false {
-				.no-touchevents &:active,
-				&.button--active {
-					border-color: $border-color--active;
-				}
-			}
-
-			@if $border-radius != false {
+			@if $border-radius {
 				border-radius: $border-radius;
 			}
 
-			@if $button-glyph != false {
-				@if $glyph-color == false and $color != false {
-					$glyph-color: $color;
+			@if $box-shadow {
+				box-shadow: $box-shadow;
+			}
+
+			@if $color != false {
+				color: $color;
+			}
+
+			@if $glyph-color != false {
+				fill: $glyph-color;
+			}
+
+
+			@if $text-align != false {
+				text-align: $text-align;
+			}
+
+			.no-touchevents &:hover {
+				@if $background--hover != false {
+					background: $background--hover;
 				}
 
-				@if $glyph-color != false {
-					.button-glyph {
-						color: $glyph-color;
-						fill: $glyph-color;
-					}
+				@if $border-color--hover != false {
+					border-color: $border-color--hover;
 				}
 
-				@if $glyph-color--hover != false {
-					.no-touchevents &:hover .button-glyph {
-						color: $glyph-color--hover;
-						fill: $glyph-color--hover;
-					}
+				@if $border-radius--hover {
+					border-radius: $border-radius--hover;
+				}
+
+				@if $box-shadow--hover {
+					box-shadow: $box-shadow--hover;
+				}
+
+				@if $color--hover != false {
+					color: $color--hover;
+				}
+
+				@if $glyph-color--hover != false{
+					fill: $glyph-color--hover;
+				}
+			}
+
+			.no-touchevents &:active,
+			&#{$button--active} {
+				@if $background--active != false {
+					background: $background--active;
+				}
+
+				@if $border-color--active != false {
+					border-color: $border-color--active;
+				}
+
+
+				@if $border-radius--active {
+					border-radius: $border-radius--active;
+				}
+
+				@if $box-shadow--hover {
+					box-shadow: $box-shadow--hover;
+				}
+
+				@if $color--active != false {
+					color: $color--active;
 				}
 
 				@if $glyph-color--active != false {
-					.no-touchevents &:active,
-					&.button--active {
-						.button-glyph {
-							color: $glyph-color--active;
-							fill: $glyph-color--active;
-						}
-					}
+					fill: $glyph-color--active;
 				}
 			}
 		}

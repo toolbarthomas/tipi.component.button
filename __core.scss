@@ -1,6 +1,7 @@
 @mixin core_button {
 	#{$buttons} {
-		&.button {
+		&#{$button} {
+			position: relative;
 			display: inline-block;
 			padding: 0;
 			margin: 0;
@@ -12,10 +13,41 @@
 			cursor: pointer;
 			color: inherit;
 			border: none;
+			white-space: nowrap;
+			line-height: 1;
 
-			font-family: $button-font-family;
-			font-weight: $button-font-weight;
-			font-style: $button-font-style;
+			@at-root input {
+				&#{$button} {
+					white-space: normal;
+				}
+			}
+
+			&:before {
+				height: inherit;
+				display: inline-block;
+				vertical-align: middle;
+				content: " ";
+				width: 0;
+			}
+
+			@if $button-font-family != false {
+				font-family: $button-font-family;
+			}
+			@else {
+				font-family: inherit;
+			}
+
+			@if $button-font-family != false {
+				font-weight: $button-font-weight;
+			} @else {
+				font-style: normal;
+			}
+
+			@if $button-font-weight != false {
+				font-style: $button-font-style;
+			} @else {
+				font-style: normal;
+			}
 
 			@include appearance(none);
 			@include user-select(none);
@@ -36,74 +68,97 @@
 				text-decoration: none;
 			}
 
-			@if $button-glyph == true {
-				&.button--glyph {
-					position: relative;
-				}
+			&#{$button--disabled} {
+				cursor: not-allowed;
 			}
-		}
 
-		&.button--disabled,
-		&[disabled] {
-			cursor: not-allowed;
-		}
-
-		&.button--wide {
-			display: block;
-			width: 100%;
+			&#{$button--full-width} {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 
-	@if $button-glyph == true {
-		.button-glyph-placeholder {
-			position: absolute;
-			display: block;
-			top: 0;
-			bottom: 0;
-			text-align: center;
-			line-height: inherit;
-
-			@if $button-glyph-default-position == 'left' {
-				left: 0;
-
-				.button--glyph-reverse & {
-					right: 0;
-					left: auto;
-				}
-			} @else {
-				right: 0;
-
-				.button--glyph-reverse & {
-					right: auto;
-					left: 0;
-				}
-			}
+	@if $button-wrapper != false {
+		#{$button-wrapper} {
+			display: inline-block;
+			white-space: normal;
+			vertical-align: middle;
 		}
+	}
 
-		.button-glyph {
-			vertical-align: baseline;
+	@if $button-glyph !=  false {
+		#{$button-glyph} {
+			vertical-align: middle;
 			line-height: normal;
 			display: inline-block;
 			margin: 0;
 			padding: 0;
 			top: auto;
-
-			@if $button-transitions == true {
-				@include transition(
-					(fill $button-transition-speed $button-transition-timing $button-transition-delay),
-					(color $button-transition-speed $button-transition-timing $button-transition-delay)
-				);
-			}
+			right: auto;
+			bottom: auto;
+			left: auto;
+			fill: inherit;
+			width: 100%;
+			height: 100%;
 
 			&:before,
 			&:after {
 				margin: 0;
 				padding: 0;
 			}
+
+			@if $button-transitions == true {
+				@if $button-transitions == true {
+					@include transition(
+						(fill $button-transition-speed $button-transition-timing $button-transition-delay)
+					);
+				}
+			}
+		}
+	}
+
+	@if $button-glyph-wrapper != false {
+		#{$button-glyph-wrapper} {
+			position: relative;
+			float: left;
+			display: block;
+			height: inherit;
+			text-align: center;
+			line-height: inherit;
+
+			&:before {
+				height: inherit;
+				display: inline-block;
+				vertical-align: middle;
+				content: " ";
+				width: 0;
+			}
+
+			@if $button-glyph != false {
+				#{$button-glyph} {
+					margin: 0;
+				}
+			}
+
+			@if $button--square != false {
+				#{$button--square} & {
+					float: none;
+					white-space: normal;
+					vertical-align: middle;
+					display: inline-block;
+					height: auto !important;
+
+					&:before {
+						display: none;
+					}
+				}
+			}
 		}
 
-		svg.button-glyph {
-			vertical-align: middle;
+		#{$button-glyph-wrapper--right} {
+			display: inline-block;
+			float: right;
 		}
 	}
 }

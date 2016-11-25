@@ -6,21 +6,327 @@
 <section id="buttons" class="fluid">
 	<div class="wrapper">
 		<h3>Button</h3>
-		<a href="#" class="button">Button based on the anchor tag</a>
-		<button href="#" class="button">Button based on the button tag</button>
-		<input type="submite" value="Button based on the input tag" class="button">
-		<h3>Button glyph</h3>
-		<a href="#" class="button button--glyph">
-			Button Glyph based on the anchor tag
-			<span class="button-glyph-placeholder">
-				<span class="button-glyph">X</span>
-			</span>
-		</a>
-		<button href="#" class="button button--glyph">
-			Button Glyph based on the button tag
-			<span class="button-glyph-placeholder">
-				<span class="button-glyph">X</span>
-			</span>
-		</button>
+
+		<h4>Regular buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button">
+					Regular anchor
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button">Regular button</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button" value="Regular input" />
+			</div>
+			<div class="element-group-item">
+				<span class="button">Regular span</span>
+			</div>
+		</div>
+
+		<h4>Multiline buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button">
+					<span class="button-wrapper">Regular anchor<br/><strong>The universe man!</strong></span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button">
+					<span class="button-wrapper">
+						Regular button<br/>
+						<strong>The multiverse!</strong>
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam." />
+			</div>
+			<div class="element-group-item">
+				<span class="button">Regular span</span>
+			</div>
+		</div>
+
+		<h4>Inline glyph buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button">
+					Inline glyph <svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg> multiline anchor
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button">
+					Inline glyph <svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg> button
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button">
+					Inline glyph <svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg> span
+				</span>
+			</div>
+		</div>
+
+		<h4>Inline glyph multiline buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button">
+					<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					<span class="button-wrapper">Inline glyph<br/>multiline anchor</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button">
+					<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					<span class="button-wrapper">Inline glyph<br/>multiline button</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button">
+					<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					<span class="button-wrapper">Inline glyph<br/>multiline span</span>
+				</span>
+			</div>
+		</div>
+
+		<h4>Fixed glyph buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph anchor
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph button
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--fixed-glyph" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph span
+				</span>
+			</div>
+		</div>
+
+		<h4>Fixed double glyph buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph multiline anchor
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph button
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--fixed-glyph" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					Fixed glyph span
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+				</span>
+			</div>
+		</div>
+
+		<h4>Fixed glyph multiline buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed glyph<br/>multiline anchor
+					</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed glyph<br/>multiline button
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--fixed-glyph" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-up" role="img"><use xlink:href="#glyph-chevron-up"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed glyph<br/>multiline span
+					</span>
+				</span>
+			</div>
+		</div>
+
+		<h4>Fixed double glyph multiline buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed double glyph<br/>multiline anchor
+					</span>
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed double glyph<br/>multiline button
+					</span>
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--fixed-glyph" value="Not (yet?) available for regular inputs :(" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--fixed-glyph">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+					<span class="button-wrapper">
+						Fixed double glyph<br/>multiline span
+					</span>
+					<span class="button-glyph-wrapper button-glyph-wrapper--right">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+				</span>
+			</div>
+		</div>
+
+		<h4>Square buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--square" value="Foo" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+				</span>
+			</div>
+		</div>
+
+		<h4>Rounded buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--rounded">
+					Rounded button anchor
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--rounded">
+					Rounded button button
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--rounded" value="Rounded button input" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--rounded">
+					Rounded button span
+				</span>
+			</div>
+		</div>
+
+		<h4>Square &amp; Rounded buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--rounded button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--rounded button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-left" role="img"><use xlink:href="#glyph-chevron-left"></use></svg>
+					</span>
+				</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button" class="button button--rounded button--square" value="Foo" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--rounded button--square">
+					<span class="button-glyph-wrapper">
+						<svg class="button-glyph glyph glyph-chevron-right" role="img"><use xlink:href="#glyph-chevron-right"></use></svg>
+					</span>
+				</span>
+			</div>
+		</div>
+
 	</div>
 </section>

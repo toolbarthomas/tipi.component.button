@@ -1,0 +1,72 @@
+@mixin button-layout(
+	$selector: $button,
+	$height: false,
+	$inner-height: false,
+	$line-height: false,
+	$gutter: false,
+	$glyph-wrapper-width: false
+) {
+	#{$buttons} {
+		&#{$selector} {
+			@if $height !=  false {
+				height: $height;
+			}
+
+			@if $inner-height != false {
+				&:before {
+					height: $inner-height;
+				}
+
+				#{$button-glyph} {
+					max-width: $inner-height;
+					max-height: $inner-height;
+				}
+
+				#{$button-glyph-wrapper} {
+					height: $inner-height;
+				}
+			}
+
+			@if $line-height != false {
+				line-height: $line-height;
+			}
+
+			@if $gutter !=  false {
+				padding-left: $gutter;
+				padding-right: $gutter;
+			}
+
+			@if $glyph-wrapper-width {
+				&#{$button--fixed-glyph} {
+
+					#{$button-glyph-wrapper} {
+						margin-left: -$gutter;
+						width: $glyph-wrapper-width;
+					}
+
+					#{$button-glyph-wrapper--right} {
+						margin-left: 0;
+						margin-right: -$gutter;
+					}
+				}
+			}
+
+			@if $button--square != false {
+				&#{$button--square} {
+					text-align: center !important;
+					width: $height;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
+			@if $button--rounded != false {
+				&#{$button--rounded} {
+					@if $height != false {
+						border-radius: $height / 2;
+					}
+				}
+			}
+		}
+	}
+}

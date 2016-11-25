@@ -3,21 +3,61 @@ $buttons: (
 	'input',
 	'button',
 	'span'
-);
+) !default;
 
-$button-font-family:				inherit !default;
-$button-font-weight:				700 !default;
-$button-font-style:					normal !default;
+$button: (
+	'.button'
+) !default;
 
-$button-gutter:						24px !default;
+$button--disabled: (
+	'.button--disabled',
+	'[disabled]'
+) !default;
+
+$button--active: (
+	'.button--active',
+	'[disabled]'
+) !default;
+
+$button--full-width: (
+	'.button--wide'
+) !default;
+
+$button--square: (
+	'.button--square'
+) !default;
+
+$button--rounded: (
+	'.button--rounded'
+) !default;
+
+$button-wrapper: (
+	'.button-wrapper'
+) !default;
+
+$button-font-family:				false !default;
+$button-font-weight:				false !default;
+$button-font-style:					false !default;
+
+// $button-gutter:						false !default;
 
 $button-transitions:				true !default;
 $button-transition-speed:			180ms !default;
 $button-transition-timing:			ease-in-out !default;
 $button-transition-delay:			0ms !default;
 
-$button-glyph:						true !default;
-$button-glyph-width:				24px !default;
-$button-glyph-default-position:		'right' !default;
-$button-glyph-center:				true !default;
-$button-square: 					true !default;
+$button-glyph: (
+	'.button-glyph'
+) !default;
+
+$button--fixed-glyph: (
+	'.button--fixed-glyph'
+) !default;
+
+$button-glyph-wrapper: (
+	'.button-glyph-wrapper'
+) !default;
+
+$button-glyph-wrapper--right: (
+	'.button-glyph-wrapper--right'
+) !default;
