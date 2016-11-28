@@ -120,6 +120,7 @@
 
 	@if $button-glyph-wrapper != false {
 		#{$button-glyph-wrapper} {
+			display: block;
 			position: relative;
 			float: left;
 			display: block;
@@ -133,6 +134,12 @@
 				vertical-align: middle;
 				content: " ";
 				width: 0;
+			}
+
+			&:after {
+				display: table;
+				clear: both;
+				content: " ";
 			}
 
 			@if $button-glyph != false {
@@ -157,7 +164,6 @@
 		}
 
 		#{$button-glyph-wrapper--right} {
-			display: inline-block;
 			float: right;
 		}
 	}
