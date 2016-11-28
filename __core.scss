@@ -120,21 +120,11 @@
 
 	@if $button-glyph-wrapper != false {
 		#{$button-glyph-wrapper} {
-			display: block;
-			position: relative;
-			float: left;
-			display: block;
-			height: inherit;
-			text-align: center;
+			white-space: normal;
+			verticsal-align: middle;
+			display: inline-block;
 			line-height: inherit;
-
-			&:before {
-				height: inherit;
-				display: inline-block;
-				vertical-align: middle;
-				content: " ";
-				width: 0;
-			}
+			text-align: center;
 
 			@if $button-glyph != false {
 				#{$button-glyph} {
@@ -142,23 +132,28 @@
 				}
 			}
 
-			@if $button--square != false {
-				#{$button--square} & {
-					float: none;
-					white-space: normal;
-					vertical-align: middle;
+			#{$button--fixed-glyph} & {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				height: inherit;
+				&:before {
+					height: inherit;
 					display: inline-block;
-					height: auto !important;
+					vertical-align: middle;
+					content: " ";
+					width: 0;
+				}
 
-					&:before {
-						display: none;
-					}
+				&#{$button-glyph-wrapper--right} {
+					left: auto;
+					right: 0;
 				}
 			}
 		}
 
-		#{$button-glyph-wrapper--right} {
-			float: right;
-		}
+
 	}
 }

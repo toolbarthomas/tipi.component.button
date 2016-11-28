@@ -38,15 +38,11 @@
 
 			@if $glyph-wrapper-width {
 				&#{$button--fixed-glyph} {
+					padding-left: $glyph-wrapper-width;
+					padding-right: $glyph-wrapper-width;
 
 					#{$button-glyph-wrapper} {
-						margin-left: -$gutter;
 						width: $glyph-wrapper-width;
-					}
-
-					#{$button-glyph-wrapper--right} {
-						margin-left: 0;
-						margin-right: -$gutter;
 					}
 				}
 			}
