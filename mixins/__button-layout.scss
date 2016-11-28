@@ -38,11 +38,22 @@
 
 			@if $glyph-wrapper-width {
 				&#{$button--fixed-glyph} {
-					padding-left: $glyph-wrapper-width;
-					padding-right: $glyph-wrapper-width;
+					@if unquote($button-glyph-wrapper-default-position) != right {
+						padding-left: $glyph-wrapper-width;
+					} @else {
+						padding-right: $glyph-wrapper-width;
+					}
 
 					#{$button-glyph-wrapper} {
 						width: $glyph-wrapper-width;
+					}
+				}
+
+				&#{$button--fixed-glyph-double} {
+					@if unquote($button-glyph-wrapper-default-position) != right {
+						padding-right: $glyph-wrapper-width;
+					} @else {
+						padding-left: $glyph-wrapper-width;
 					}
 				}
 			}

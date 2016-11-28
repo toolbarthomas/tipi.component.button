@@ -54,10 +54,17 @@ $button--fixed-glyph: (
 	'.button--fixed-glyph'
 ) !default;
 
+$button--fixed-glyph-double: (
+	'.button--fixed-glyph-double'
+) !default;
+
+
 $button-glyph-wrapper: (
 	'.button-glyph-wrapper'
 ) !default;
 
-$button-glyph-wrapper--right: (
-	'.button-glyph-wrapper--right'
+$button-glyph-wrapper-default-position: right !default;
+
+$button-glyph-wrapper--reverse: (
+	'.button-glyph-wrapper--reverse'
 ) !default;

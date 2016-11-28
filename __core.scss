@@ -136,9 +136,16 @@
 				display: block;
 				position: absolute;
 				top: 0;
-				left: 0;
-				display: block;
+
+				@if unquote($button-glyph-wrapper-default-position) != right {
+					left: 0;
+				} @else {
+					right: 0;
+				}
+
 				height: inherit;
+
+
 				&:before {
 					height: inherit;
 					display: inline-block;
@@ -147,9 +154,14 @@
 					width: 0;
 				}
 
-				&#{$button-glyph-wrapper--right} {
-					left: auto;
-					right: 0;
+				&#{$button-glyph-wrapper--reverse} {
+					@if unquote($button-glyph-wrapper-default-position) != right {
+						right: 0;
+						left: auto;
+					} @else {
+						left: 0;
+						right: auto;
+					}
 				}
 			}
 		}
