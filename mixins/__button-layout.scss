@@ -56,6 +56,22 @@
 						padding-left: $glyph-wrapper-width;
 					}
 				}
+
+				&#{$button--fixed-glyph-reverse} {
+					@if unquote($button-glyph-wrapper-default-position) != right {
+						padding-left: $glyph-wrapper-width;
+						@if $gutter !=  false {
+							padding-right: $gutter;
+						}
+
+					} @else {
+						padding-right: $glyph-wrapper-width;
+						@if $gutter != false {
+							padding-left: $gutter;
+						}
+
+					}
+				}
 			}
 
 			@if $button--square != false {
