@@ -164,6 +164,26 @@
 					}
 				}
 			}
+
+			#{$button--fixed-glyph-reverse} & {
+				@if unquote($button-glyph-wrapper-default-position) != right {
+					right: 0;
+					left: auto;
+				} @else {
+					left: 0;
+					right: auto;
+				}
+
+				&#{$button-glyph-wrapper--reverse} {
+					@if unquote($button-glyph-wrapper-default-position) != right {
+						left: 0;
+						right: auto;
+					} @else {
+						right: 0;
+						left: auto;
+					}
+				}
+			}
 		}
 
 
