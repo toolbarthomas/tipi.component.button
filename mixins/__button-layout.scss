@@ -75,10 +75,7 @@
 
 			@if $button--square != false {
 				&#{$button--square} {
-					text-align: center !important;
 					width: $height;
-					padding-left: 0;
-					padding-right: 0;
 				}
 			}
 
