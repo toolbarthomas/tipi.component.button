@@ -123,7 +123,7 @@
 			white-space: normal;
 			vertical-align: middle;
 			display: inline-block;
-			line-height: inherit;
+			line-height: 1;
 			text-align: center;
 
 			@if $button-glyph != false {
@@ -137,22 +137,17 @@
 				position: absolute;
 				top: 0;
 
+				@if $inner-height != false {
+					height: $inner-height;
+					line-height: $inner-height;
+				}
+
 				@if unquote($button-glyph-wrapper-default-position) != right {
 					left: 0;
 				} @else {
 					right: 0;
 				}
 
-				height: inherit;
-
-
-				&:before {
-					height: inherit;
-					display: inline-block;
-					vertical-align: middle;
-					content: " ";
-					width: 0;
-				}
 
 				&#{$button-glyph-wrapper--reverse} {
 					@if unquote($button-glyph-wrapper-default-position) != right {
