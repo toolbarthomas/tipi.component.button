@@ -22,13 +22,13 @@
 				}
 			}
 
-			&:before {
-				height: inherit;
-				display: inline-block;
-				vertical-align: middle;
-				content: " ";
-				width: 0;
-			}
+			// &:before {
+			// 	height: inherit;
+			// 	display: inline-block;
+			// 	vertical-align: middle;
+			// 	content: " ";
+			// 	width: 0;
+			// }
 
 			@if $button-font-family != false {
 				font-family: $button-font-family;
@@ -121,7 +121,7 @@
 	@if $button-glyph-wrapper != false {
 		#{$button-glyph-wrapper} {
 			white-space: normal;
-			verticsal-align: middle;
+			vertical-align: middle;
 			display: inline-block;
 			line-height: inherit;
 			text-align: center;
@@ -190,12 +190,8 @@
 	@if $button--square != false {
 		&#{$button--square} {
 			text-align: center !important;
-			padding-left: 0;
-			padding-right: 0;
-
-			&:before {
-				display: none !important;
-			}
+			padding-left: 0 !important;
+			padding-right: 0 !important;
 		}
 	}
 }
