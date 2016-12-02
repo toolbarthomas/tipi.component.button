@@ -75,7 +75,13 @@
 
 			@if $button--square != false {
 				&#{$button--square} {
-					width: $height;
+					@if $height !=  false {
+						width: $height;
+					}
+
+					@if $inner-height != false {
+						line-height: $inner-height;
+					}
 				}
 			}
 
