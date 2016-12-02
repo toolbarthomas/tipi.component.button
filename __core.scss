@@ -137,17 +137,11 @@
 				position: absolute;
 				top: 0;
 
-				@if $inner-height != false {
-					height: $inner-height;
-					line-height: $inner-height;
-				}
-
 				@if unquote($button-glyph-wrapper-default-position) != right {
 					left: 0;
 				} @else {
 					right: 0;
 				}
-
 
 				&#{$button-glyph-wrapper--reverse} {
 					@if unquote($button-glyph-wrapper-default-position) != right {

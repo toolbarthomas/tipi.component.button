@@ -19,10 +19,6 @@
 					max-width: $inner-height;
 					max-height: $inner-height;
 				}
-
-				// #{$button-glyph-wrapper} {
-				// 	height: $inner-height;
-				// }
 			}
 
 			@if $gutter !=  false {
@@ -41,6 +37,15 @@
 				}
 			}
 
+			@if $button-glyph-wrapper {
+				#{$button-glyph-wrapper} {
+					@if $inner-height != false {
+						height: $inner-height;
+						line-height: $inner-height;
+					}
+				}
+			}
+
 			@if $glyph-wrapper-width {
 				&#{$button--fixed-glyph} {
 					@if unquote($button-glyph-wrapper-default-position) != right {
@@ -49,8 +54,10 @@
 						padding-right: $glyph-wrapper-width;
 					}
 
-					#{$button-glyph-wrapper} {
-						width: $glyph-wrapper-width;
+					@if $button-glyph-wrapper {
+						#{$button-glyph-wrapper} {
+							width: $glyph-wrapper-width;
+						}
 					}
 				}
 
