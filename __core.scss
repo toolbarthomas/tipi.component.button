@@ -40,7 +40,7 @@
 			@if $button-font-weight != false {
 				font-weight: $button-font-weight;
 			} @else {
-				font-style: normal;
+				font-weight: normal;
 			}
 
 			@if $button-font-style != false {
