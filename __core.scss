@@ -37,13 +37,13 @@
 				font-family: inherit;
 			}
 
-			@if $button-font-family != false {
+			@if $button-font-weight != false {
 				font-weight: $button-font-weight;
 			} @else {
 				font-style: normal;
 			}
 
-			@if $button-font-weight != false {
+			@if $button-font-style != false {
 				font-style: $button-font-style;
 			} @else {
 				font-style: normal;
