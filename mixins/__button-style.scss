@@ -51,7 +51,7 @@
 				text-align: $text-align;
 			}
 
-			.no-touchevents &:hover {
+			.no-touchevents &:not([class*="disabled"]):hover {
 				@if $background--hover != false {
 					background: $background--hover;
 				}
@@ -77,7 +77,7 @@
 				}
 			}
 
-			.no-touchevents &:active,
+			.no-touchevents &:not([class*="disabled"]):active,
 			&#{$button--active} {
 				@if $background--active != false {
 					background: $background--active;
