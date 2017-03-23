@@ -1,8 +1,6 @@
-{
-  "template": "default",
-  "title": "Button"
-}
+{% extends "layouts/base.twig" %}
 
+{% block content %}
 <section id="buttons" class="fluid">
 	<div class="wrapper">
 		<h3>Button</h3>
@@ -22,6 +20,24 @@
 			</div>
 			<div class="element-group-item">
 				<span class="button">Regular span</span>
+			</div>
+		</div>
+
+		<h4>Disabled buttons</h4>
+		<div class="element-group">
+			<div class="element-group-item">
+				<a href="" class="button button--disabled">
+					Regular anchor
+				</a>
+			</div>
+			<div class="element-group-item">
+				<button class="button button--disabled">Regular button</button>
+			</div>
+			<div class="element-group-item">
+				<input type="button button--disabled" class="button button--disabled" value="Regular input" />
+			</div>
+			<div class="element-group-item">
+				<span class="button button--disabled">Regular span</span>
 			</div>
 		</div>
 
@@ -359,6 +375,6 @@
 				</span>
 			</div>
 		</div>
-
 	</div>
 </section>
+{% endblock %}
